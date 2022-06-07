@@ -1,1 +1,35 @@
-<p>slider works!</p>
+<div class="slider">
+    <div class="div__btn">
+        <button 
+            class="btn__movimiento" 
+            (click)="disminuirMovimiento()"
+            >
+            <
+        </button>
+        
+        <button 
+            class="btn__movimiento" 
+            (click)="aumentarMovimiento()"
+            >
+            >
+        </button>
+     
+    </div>
+
+    <div 
+        [ngStyle]=" 
+        {
+        'width' : valorAnchoSlide(),
+        'transform' : valorTranslate(),
+        'grid-template-columns' : valorGrid()
+        } "
+        class="slider__slide">
+        
+        <!-- <app-slider-card
+            *ngFor="let cadaLista of listas"
+            [tipo]="cadaLista.dato"
+            [dato]="cadaLista"
+        ></app-slider-card> -->
+
+    </div>
+</div>

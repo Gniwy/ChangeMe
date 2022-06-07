@@ -1,0 +1,26 @@
+.slider{
+    width:90%;
+    margin:0 auto;
+    overflow:hidden;
+
+}
+.slider__slide{
+    position:relative;
+    margin-right:1em;
+    display:grid;
+    transition: .5s ease;
+    gap: 1em;
+}
+
+.div__btn{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: end;
+
+}
+.btn__movimiento{
+    margin-right: 10px;
+    cursor:pointer;
+    padding:5px;
+}
+
