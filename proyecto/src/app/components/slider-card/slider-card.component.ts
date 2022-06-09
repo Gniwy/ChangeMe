@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-slider-card',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider-card.component.scss']
 })
 export class SliderCardComponent implements OnInit {
+
+  @Input() tipo : string = ''
+  @Input() dato : any = {}
 
   constructor() { }
 

@@ -1,1 +1,36 @@
-<p>slider-card works!</p>
+
+<a class="card"
+[routerLink]="['/restaurante',dato.url]"
+>
+
+<div class="card__div_img">
+    <img *ngIf=" tipo === 'restaurante' " class="card__insider" src="" alt="">
+    <img class="card__img" [src]="dato.imagen" alt="">
+</div>
+
+<ul *ngIf=" tipo === 'restaurante'" class="card__categorias">
+    <li *ngFor=" let cadaTipo of dato.tipos" class="card__li_categoria">{{ cadaTipo}}</li>
+</ul>
+
+<ul *ngIf=" tipo !== 'ciudad'" class="card__info">
+    <li *ngIf=" tipo !== 'ciudad' " class="card__title">{{ dato.nombre }}</li>
+    <li *ngIf=" tipo !== 'ciudad' && tipo === 'restaurante' " class="card__nota">{{ dato.nota }}</li>
+</ul>
+
+<div *ngIf=" tipo === 'restaurante'" class="card__btn_restaurantes">
+    <span *ngIf=" dato.pagos.insider " class="card__btn_insider">insider</span>
+    <span *ngIf=" dato.pagos.pay " class="card__btn_pay">pay</span>
+    <span *ngIf=" dato.pagos.yums" class="card__btn_yums">doble yums</span>
+</div>
+
+<p *ngIf=" tipo !== 'ciudad'" class="card__descripcion">{{dato.descripcion}}</p>
+
+<ul *ngIf=" tipo === 'restaurante'" class="card__div_descuento">
+    <li class="card__descuento">-{{ dato.ofertas }} %</li>
+    <li class="card__aceptaYums">Acepta Yums</li>
+</ul> 
+
+<p *ngIf=" tipo === 'oferta' " class="card_restaurante">Ver los restaurantes</p>
+
+</a>
+

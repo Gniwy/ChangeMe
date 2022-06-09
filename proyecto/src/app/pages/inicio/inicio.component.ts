@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BbddService } from 'src/app/services/bbdd.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  sliders : any
+
+  constructor(
+    private bbddService : BbddService
+  ) { 
+    this.sliders = this.bbddService.sliders;
+  }
 
   ngOnInit(): void {
   }
