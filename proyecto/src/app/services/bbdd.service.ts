@@ -212,32 +212,7 @@ export class BbddService {
       flechas        : true ,
       numElemVisible : 4 ,
       restaurantes   : this.ofertas
-    },
-    {
-      titulo         : 'Selecciones para tí',
-      flechas        : true ,
-      numElemVisible : 3 ,
-      restaurantes   : this.restaurantes
-    },
-    {
-      titulo         : 'Mejores restaurantes de Madrid',
-      flechas        : true ,
-      numElemVisible : 3 ,
-      restaurantes   : this.restaurantes.filter( cadaRestaurante => cadaRestaurante.ciudad === 'madrid')
-    },
-    {
-      titulo         : 'Mejores restaurantes de Cádiz',
-      flechas        : true ,
-      numElemVisible : 3 ,
-      restaurantes   : this.restaurantes.filter( cadaRestaurante => cadaRestaurante.ciudad === 'cadiz')
-    },
-    {
-      titulo         : 'Mejores restaurantes de Barcelona',
-      flechas        : true ,
-      numElemVisible : 3 ,
-      restaurantes   : this.restaurantes.filter( cadaRestaurante => cadaRestaurante.ciudad === 'barcelona')
-    },
-   
+    }
   ]
   slidersMundo : Array<any> = [
       {

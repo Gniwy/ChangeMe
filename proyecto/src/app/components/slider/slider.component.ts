@@ -59,6 +59,12 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.numVecesMueve = this.listas.length / this.numElementosVisible
+    this.anchoSlide = this.numVecesMueve * 100;
+    this.traslateSlide = 100 / this.numVecesMueve;
+    this.anchoElemento = 100 / this.listas.length;
+    this.numElementos = this.listas.length;
+    
   }
 
 }
